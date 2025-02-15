@@ -1,1 +1,26 @@
+class Spaceship:
+    def __init__(self, name, crew, speed):
+        self.name = name
+        self.crew = int(crew)  # Convert to integer
+        self.speed = int(speed)  # Convert to integer
 
+    def increase_speed(self):
+        print(self.speed * 10)  # Multiply speed by 10
+
+    def set_crew_capacity(self, new_crew):
+        self.crew = int(new_crew)  # Update crew capacity
+        print(f"Updated crew capacity: {self.crew}")
+
+# Taking input
+print("Enter the name, crew capacity, speed:")
+name = input()
+crew = input()
+speed = input()
+
+# Creating Spaceship object
+space = Spaceship(name, crew, speed)
+
+# Taking new crew capacity input
+print("Enter new crew capacity:")
+newcrew = input()
+space.set_crew_capacity(newcrew)
